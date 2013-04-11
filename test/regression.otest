@@ -1,0 +1,181 @@
+AsGCTypePtr>>Basic>>otest_initial_state>>ptr0#0:b4195e18bd12965d327c4808d01f0752
+AsGCTypePtr>>Basic>>otest_initial_state>>ptr0#1:d984fa14daba3e089c4ad5467ee58fa9
+AsGCTypePtr>>Basic>>otest_initial_state>>ptr1#0:b4195e18bd12965d327c4808d01f0752
+AsGCTypePtr>>Basic>>otest_initial_state>>ptr1#1:bf33323c44a318dff5867ec597046762
+AsGCTypePtr>>TAsGCObjectTrait>>otest_initial_state>>member_direct_direct_trait:275c181e948717372a0f9063499616e5
+AsGCTypePtr>>TAsGCObjectTrait>>otest_initial_state>>member_direct_direct_trait_after_gc_clean:af55c445d3ed132368d3cd671fac4762
+AsGCTypePtr>>TAsGCObjectTrait>>otest_initial_state>>member_impl_impl_trait:8dc485e308e6353220cabb34fd9350fe
+AsGCTypePtr>>TAsGCObjectTrait>>otest_initial_state>>root_direct_direct_trait:979e3d10c3dbe212ece6ef63309416d2
+AsGCTypePtr>>TAsGCObjectTrait>>otest_initial_state>>root_impl_impl_trait:a5a86a6408fdb450dabdd826cc099ddf
+AsGCTypePtr>>Trait>>otest_initial_state>>direct_default_member_ptr:bf33323c44a318dff5867ec597046762
+AsGCTypePtr>>Trait>>otest_initial_state>>direct_default_root_ptr:bf33323c44a318dff5867ec597046762
+AsGCTypePtr>>Trait>>otest_initial_state>>direct_null_object_member_ptr:de5ec9d2eb31809ff3dbca6eb703a49e
+AsGCTypePtr>>Trait>>otest_initial_state>>direct_null_object_root_ptr:de5ec9d2eb31809ff3dbca6eb703a49e
+AsGCTypePtr>>Trait>>otest_initial_state>>direct_object_member_ptr:7cc190746b2478b76a224753b20eab82
+AsGCTypePtr>>Trait>>otest_initial_state>>direct_object_root_ptr:7cc190746b2478b76a224753b20eab82
+AsGCTypePtr>>Trait>>otest_initial_state>>direct_trait_null_object:de5ec9d2eb31809ff3dbca6eb703a49e
+AsGCTypePtr>>Trait>>otest_initial_state>>impl_default_member_ptr:bf33323c44a318dff5867ec597046762
+AsGCTypePtr>>Trait>>otest_initial_state>>impl_default_root_ptr:bf33323c44a318dff5867ec597046762
+AsGCTypePtr>>Trait>>otest_initial_state>>impl_null_object_member_ptr:08c6c46d9234c4eaab6b032b8c5ac215
+AsGCTypePtr>>Trait>>otest_initial_state>>impl_null_object_root_ptr:08c6c46d9234c4eaab6b032b8c5ac215
+AsGCTypePtr>>Trait>>otest_initial_state>>impl_object_member_ptr:865e32bebff92a042476581780822952
+AsGCTypePtr>>Trait>>otest_initial_state>>impl_object_root_ptr:865e32bebff92a042476581780822952
+AsGCTypePtr>>Trait>>otest_initial_state>>impl_trait_null_object:08c6c46d9234c4eaab6b032b8c5ac215
+AsGCTypePtr>>Trait>>otest_initial_state>>parent_null_object_member_ptr:bf33323c44a318dff5867ec597046762
+AsGCTypePtr>>Trait>>otest_initial_state>>parent_object_member_ptr:bf33323c44a318dff5867ec597046762
+AsGCTypePtr>>Variations>>otest_initial_state>>member_direct_direct:7292c94ddae2c74358db7063aaa28faf
+AsGCTypePtr>>Variations>>otest_initial_state>>member_iface0_impl:c22b18676ae0ef20eff082bac02f5b5d
+AsGCTypePtr>>Variations>>otest_initial_state>>member_impl_impl:1732e42e04950e2f604bdfb235ae5ba3
+AsGCTypePtr>>Variations>>otest_initial_state>>root_direct_direct:83c0f4f1284f647ee14ff5fef93e1731
+AsGCTypePtr>>Variations>>otest_initial_state>>root_iface0_impl:9434e787bc0fb5e21e07c3d2cfadd59d
+AsGCTypePtr>>Variations>>otest_initial_state>>root_impl_impl:d215805c6e4a55f83ffcb9549c3ca97c
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 0:f3cc7d11b1a17944607cb787b35a63a8
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 1:2d76432b233323ed66e62f925ccf2b47
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 10:9575cb06c0f9ffa77e1046013454c46c
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 11:c8cb86ba39ca3a578407c59552823083
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 12:012cb7bc7d364e0c0a7a150819179f1a
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 13:186fbb105a4028be4935f5cf303dfaaf
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 14:b8c601b117dd11bb73ee11c0868b2392
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 15:464d657f814776a16d66fe9474fa6c80
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 16:089dc48b6ce4f40600b8143cdb13af2d
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 17:1b12d5cbd1cdec5dabf3b201561d0702
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 18:4922910e8cdcbd1a17bb58c74d78eda0
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 19:1df9eb1a61a9b80105de75fa6561f615
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 2:fe5667f84de10c07cea33847532e25a1
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 20:0427820687a161b6168237b060cd5e54
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 21:8760320b9aac8e95c2b8490195e236c7
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 22:9baafe7aa1546f422d88c2ddc94bab87
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 23:157cc7fc42eb3c86b692e41e6d14d0bb
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 24:b912c526e745fbd450889b84bc9a7d1f
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 25:69fbb2bb2c8eeb442598a936268a80ff
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 26:7fe42c271b6623f3c2db8135fb01c0d6
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 27:79f61fcec96114b9e4fb88db2ad2fa27
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 28:2d655ffc95206679b954536e64b0d8b4
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 29:f298db3c91c3f933eb6c4db90798875f
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 3:babbc93747315d4539072bcc30b0100e
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 30:bf8009db75369d80bc1761158d9a3a80
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 31:325347977c344c8126bb6a83e48e9fca
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 32:3a802ab51ab916106cbd396480408668
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 33:ba1b438410758db5c9277fb9f5741361
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 34:64233ccad7cb3bc46750f3173e0dadaa
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 35:e7ee43980406a98ea6158f82b5b0f3b2
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 36:28045e89eaf3a4d7fc1824cac807b2d1
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 37:3aa1a5e44786e180264849353dcc50b2
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 38:299d42897be9d473c9b9c3acee2ef880
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 39:facf58555f4df4e172f2083ffdd5cc45
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 4:b6e32f8200d00cd4720a83471080c56d
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 40:24927d81a58854f1e0738744acbbcf64
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 41:b40ef332a0bbd31ac2199d82e1a2fbdd
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 42:a18f0bf6dd5b3629615e20c28520cec5
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 43:c25488cd7f3db6eed882d9502a8e6a25
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 44:da508775b2d3c379e626d3eef78b1c1a
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 45:e1ec20065909fcebc76fd5540d3cfde8
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 46:ed98b5e6901a2b91f2aa86c3ba4a65a4
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 47:9c8c248601f609eac67db6d644779c59
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 48:447ff130425a3a2cced920e0ed03eb7b
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 49:e00100cb4cc334f90faaa75138ba2764
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 5:a34d0d4d38c616b3c59e0d77af2b7d43
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 50:2b9550724f2699714ef16e1229f2f4ca
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 51:c86c5003b60b9cb6f995898741677c3a
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 52:835688c750a7ddc9e133ee495589b8b9
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 53:c940dbef879f78828ca30e5bb405788f
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 54:a10302173fa587f30a5bdd22f431e10c
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 55:9ddb1ccc1e4f52e97867dd8867bb20fa
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 56:959d78c994772ab63ee1dc52a02975d2
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 57:dc3fd6233fcca0fa354e65d83e1b9f1a
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 58:e3d9c3d66bf496baf00e048292af7214
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 59:2b8a1b7ae3f7ba135d4937a8a2808cea
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 6:e443fcc0da8a9b01438ceb25daf48ba9
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 60:2e724068b4b3d6e6bce1a87c1b27f6d3
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 61:af45d9f8a83fe7b2e7ee7226207f11ec
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 62:c4cbf0a31d5baa0dae15cbfedd5177f7
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 63:0bfec8511d8ae72161891017752b4f14
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 64:98f310f6bf3eeafc7d9aab644740a482
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 65:3935ed40df9c317da6032e86e3fef251
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 66:6ee7a242c75268a7e25c1b1832a76d14
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 67:6b0ab26b23f8c286523cfc979f27b0a0
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 68:c407bee17eeafae5ed5f168a1285c86e
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 69:acd99b13ec6ff9e055878afbcebf0fa1
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 7:5791ff7267a072a4fdfe2088d458d822
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 70:ccad154de82b4a15147f5b4a63ae03dd
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 71:8dadeb7e037a338f0a95b0fcd8fca011
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 72:a7bf451c70ab852de0747df23b2fc8c5
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 73:93f0b3bf4812ae87f001c9e8b7a92f76
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 74:18826e00edfb9e6a7d379fd16c1e9040
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 75:6f4c970692a1313172f489cd3126ca99
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 76:a53c2accf1d322e17dac1a6458b9b236
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 77:b9a609e812f7cc6ed6152a2b436e0421
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 78:0031561b9f412cc9f7a63a6c66938e07
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 79:4334f6832b6ae16f5a8181fc04c09407
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 8:142c01fd2e9eddb3f72585ed9886b625
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 80:cc807a5dc1ad003631164a5530832935
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 81:18b8abe142213002101ede396dced9f9
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 82:262ba00ee09262dd67648959617d0260
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 83:91722c87bb78a212060e120e4102eb26
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 84:5ade9b22ec020bbe053cc43e95c78a0f
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 85:edf043cd79139203e9d4fc6530d64940
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 86:96f2c329539d84ac3c85ce27a387872f
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 87:667cead86269a2845a367acf41a90ff0
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 88:800d4db8ea07b2fde553d9523049ff29
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 89:85c0cae545facc5a0cbff66464f38c56
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 9:f210fb232eb63ce54afc0f2e9455c9d8
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 90:47b3d9741fcdc81ba539e92104d22aa3
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 91:53acfad241ef03bcef759e0fd92b173d
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 92:f2b30724b07d0454413264e7e1c97e05
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 93:8d4241c01d4b5c3abfbd17d64c513dd1
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 94:904179245eb97ccfb711859f866d5831
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 95:38058e60c808b922955db676eb3173d0
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 96:993c5931304b2806deebb660480be6b6
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 97:b1e23e73af4d5bed79dfed56a56ccb31
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 98:a38ca224fb35099fa15bad3be924aead
+GarbageCollector>>BigTest>>otest_initial_state>>Cycle 99:6490252a1b6b4289410f3d7fd7b02447
+GarbageCollector>>BigTest>>otest_initial_state>>cleaned:089c35b86a73edc37d05c23b971cd7fe
+GarbageCollector>>Collecting>>otest_initial_state>>first cycle:c987192586409502da8683c15be32473
+GarbageCollector>>Collecting>>otest_initial_state>>fourth cycle:089c35b86a73edc37d05c23b971cd7fe
+GarbageCollector>>Collecting>>otest_initial_state>>reporter hash:7e423e726ee1079a1d6abb49e38e081c
+GarbageCollector>>Collecting>>otest_initial_state>>second cycle:90bd7458b07c1c4e88c9f52afebb6083
+GarbageCollector>>Collecting>>otest_initial_state>>third cycle:b3d0d73ec64847b4e154422ba16fb0a5
+GarbageCollector>>InvalidationOfWeakReferences>>otest_initial_state>>all strong:e23477979eb88101be8b9820271d0f18
+GarbageCollector>>InvalidationOfWeakReferences>>otest_initial_state>>all weak:b7b0b5fafca3732af09f4161865efce2
+GarbageCollector>>InvalidationOfWeakReferences>>otest_initial_state>>all weak 2:646945ead12c061f3e4172e1b95820c8
+GarbageCollector>>InvalidationOfWeakReferences>>otest_initial_state>>clear:b20d0e93c915c7ffcae4a51e4382df9a
+GarbageCollector>>InvalidationOfWeakReferences>>otest_initial_state>>clear 2:62500e7dd10eb5d5a27a054bf05ed37d
+GarbageCollector>>InvalidationOfWeakReferences>>otest_initial_state>>invalidate on invalid:b20d0e93c915c7ffcae4a51e4382df9a
+GarbageCollector>>InvalidationOfWeakReferences>>otest_initial_state>>invalidate the child:e838b6498eb6aef3c24b17f85ae23f87
+GarbageCollector>>InvalidationOfWeakReferences>>otest_initial_state>>invalidate the child 2:62b4cc7d67a002cb013a65c17832945f
+GarbageCollector>>InvalidationOfWeakReferences>>otest_initial_state>>invalidate the child 2 again:62b4cc7d67a002cb013a65c17832945f
+GarbageCollector>>InvalidationOfWeakReferences>>otest_initial_state>>invalidate the child again:e838b6498eb6aef3c24b17f85ae23f87
+GarbageCollector>>InvalidationOfWeakReferences>>otest_initial_state>>reporter hash:a56251459ceb0052cbfb7a80975bda5e
+GarbageCollector>>WeakReferences>>otest_initial_state>>all strong:b7000ac1f196c2cb91dccbadd704acbf
+GarbageCollector>>WeakReferences>>otest_initial_state>>all weak:b20d0e93c915c7ffcae4a51e4382df9a
+GarbageCollector>>WeakReferences>>otest_initial_state>>destroyed referent:089c35b86a73edc37d05c23b971cd7fe
+GarbageCollector>>WeakReferences>>otest_initial_state>>make strong:9cddadd140d7fd932f6e82950b87d4a9
+GarbageCollector>>WeakReferences>>otest_initial_state>>one weak:d8a58bd2b9139f9fb47d4ca736cb27f0
+GarbageCollector>>WeakReferences>>otest_initial_state>>removed strong:b20d0e93c915c7ffcae4a51e4382df9a
+GarbageCollector>>WeakReferences>>otest_initial_state>>reporter hash:2a45f475c14e6dc6f5a16149522c4464
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>all strong:e23477979eb88101be8b9820271d0f18
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>all weak:865d1cd7b79b32198430c066645fe589
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>all weak again:865d1cd7b79b32198430c066645fe589
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>destroyed referent:b7000ac1f196c2cb91dccbadd704acbf
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>destroyed referent again:b7000ac1f196c2cb91dccbadd704acbf
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>make strong:bb9dabdd72bd29081442175420903322
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>make strong again:bb9dabdd72bd29081442175420903322
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>one weak:7cd15daec189d513a12d6e7580d96732
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>one weak again:7cd15daec189d513a12d6e7580d96732
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>removed strong:865d1cd7b79b32198430c066645fe589
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>reporter hash:591eba32e2f02139aec50396e556c9fc
+GarbageCollector>>WeakReferencesMember>>otest_initial_state>>strong on invalid:b7000ac1f196c2cb91dccbadd704acbf
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>all strong:b7000ac1f196c2cb91dccbadd704acbf
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>all weak:b20d0e93c915c7ffcae4a51e4382df9a
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>all weak again:b20d0e93c915c7ffcae4a51e4382df9a
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>destroyed referent:089c35b86a73edc37d05c23b971cd7fe
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>destroyed referent again:089c35b86a73edc37d05c23b971cd7fe
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>make strong:9cddadd140d7fd932f6e82950b87d4a9
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>make strong again:9cddadd140d7fd932f6e82950b87d4a9
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>one weak:d8a58bd2b9139f9fb47d4ca736cb27f0
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>one weak again:d8a58bd2b9139f9fb47d4ca736cb27f0
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>removed strong:b20d0e93c915c7ffcae4a51e4382df9a
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>reporter hash:2a45f475c14e6dc6f5a16149522c4464
+GarbageCollector>>WeakReferencesRoot>>otest_initial_state>>strong on invalid:089c35b86a73edc37d05c23b971cd7fe
+TBugs>>Bug3561>>otest_initial_state>>a dead object:d1e0d1ff3388e77ac915df1b6b6e8f9a
+TBugs>>Bug3561>>otest_initial_state>>cleaned:089c35b86a73edc37d05c23b971cd7fe

@@ -1,0 +1,8 @@
+Project;
+  HeaderDir("ondragc", "include");
+  Subdirs(["lib", "test", "example"]);
+  ExtraFiles([
+    "COPYING",
+    "COPYING.LESSER",
+  ]);
+EndProject;

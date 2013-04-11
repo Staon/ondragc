@@ -1,0 +1,10 @@
+Include([".", "../include"]);
+
+Project();
+  TestExec("gcexample", [
+    "main.cpp",
+  ]);
+  Link([
+    "ondragc.lib",
+  ]);
+EndProject();

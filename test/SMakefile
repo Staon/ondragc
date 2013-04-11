@@ -1,0 +1,13 @@
+Include([".", "../include", "../lib"]);
+
+Project();
+  Test("runtest", [
+    "tbugs.h",
+    "tcollector.h",
+    "testobject.cpp", "testobject.h",
+  ], "r");
+  Link([
+    "ondragc.lib",
+    "ondrart_heapcheck.lib",
+  ]);
+EndProject();
