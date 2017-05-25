@@ -4,5 +4,5 @@ AM_INIT_AUTOMAKE
 AC_PROG_CXX
 AC_CONFIG_HEADER(config.h)
 AC_HEADER_ASSERT
-AC_CONFIG_FILES([Makefile lib/Makefile])
+AC_CONFIG_FILES([Makefile lib/Makefile example/Makefile])
 AC_OUTPUT
