@@ -12,3 +12,6 @@ gcexample
 .deps
 .project
 .cproject
+/config.h
+/Makefile
+/autom4te.cache/
