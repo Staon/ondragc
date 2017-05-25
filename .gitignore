@@ -15,3 +15,4 @@ gcexample
 /config.h
 /Makefile
 /autom4te.cache/
+/config.status
