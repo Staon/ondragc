@@ -27,7 +27,7 @@ namespace OndraGC {
 /**
  * @brief Typed root pointer
  */
-template<class Object> class TypeRootPtr : public RootPtr {
+template<class Object_> class TypeRootPtr : public RootPtr {
   public:
     /**
      * @brief Ctor - null (invalid) pointer
@@ -41,54 +41,54 @@ template<class Object> class TypeRootPtr : public RootPtr {
      * @note The implicit conversion is expected
      */
     TypeRootPtr(
-        Object* object_);
+        Object_* object_);
 
     /**
      * @brief Copy ctor
      */
     TypeRootPtr(
-        const TypeRootPtr<Object>& ptr_);
+        const TypeRootPtr<Object_>& ptr_);
 
     /**
      * @brief Swap two pointers
      */
     void swap(
-        TypeRootPtr<Object>& ptr_);
+        TypeRootPtr<Object_>& ptr_);
 
     /**
      * @brief Assignment
      */
-    TypeRootPtr<Object>& operator = (
-        const TypeRootPtr<Object>& ptr_);
+    TypeRootPtr<Object_>& operator = (
+        const TypeRootPtr<Object_>& ptr_);
 
     /**
      * @brief Assignment
      *
      * @param ptr_ A GC object. The ownership is taken.
      */
-    TypeRootPtr<Object> & operator = (
-        Object* ptr_);
+    TypeRootPtr<Object_> & operator = (
+        Object_* ptr_);
 
     /**
      * @brief Get the object
      */
-    Object& operator *() const;
+    Object_& operator *() const;
 
     /**
      * @brief Get the object
      */
-    Object* operator -> () const;
+    Object_* operator -> () const;
 
     /**
      * @brief Get the object
      */
-    Object* objectAddr() const;
+    Object_* objectAddr() const;
 };
 
 /**
  * @brief Typed member pointer
  */
-template<class Object> class TypeMemberPtr : public MemberPtr {
+template<class Object_> class TypeMemberPtr : public MemberPtr {
   public:
     /**
      * @brief Ctor - null (invalid) pointer
@@ -112,40 +112,40 @@ template<class Object> class TypeMemberPtr : public MemberPtr {
      */
     TypeMemberPtr(
         Object* parent_,
-        Object* object_);
+        Object_* object_);
 
     /**
      * @brief Copy ctor
      */
     TypeMemberPtr(
-        const TypeMemberPtr<Object>& ptr_);
+        const TypeMemberPtr<Object_>& ptr_);
 
     /**
      * @brief Swap pointers
      */
     void swap(
-        TypeMemberPtr<Object>& ptr_);
+        TypeMemberPtr<Object_>& ptr_);
 
     /**
      * @brief Assignment
      */
-    TypeMemberPtr<Object>& operator = (
-        const TypeMemberPtr<Object>& ptr_);
+    TypeMemberPtr<Object_>& operator = (
+        const TypeMemberPtr<Object_>& ptr_);
 
     /**
      * @brief Get the GC object
      */
-    Object& operator *() const;
+    Object_& operator *() const;
 
     /**
      * @brief Get the GC object
      */
-    Object* operator -> () const;
+    Object_* operator -> () const;
 
     /**
      * @brief Get the GC object
      */
-    Object* objectAddr() const;
+    Object_* objectAddr() const;
 };
 
 } /* -- namespace OndraGC */

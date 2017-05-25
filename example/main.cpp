@@ -17,6 +17,7 @@
  * along with OndraGC.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <cstring>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -82,11 +83,11 @@ template class TypeMemberPtr<Example>;
 Example::Example(
     const std::string& name_) :
   name(name_) {
-  std::cout << "Constructed " << name << std::endl;
+  std::cout << "Constructed " << name.c_str() << std::endl;
 }
 
 Example::~Example() {
-  std::cout << "Destructed " << name << std::endl;
+  std::cout << "Destructed " << name.c_str() << std::endl;
 }
 
 void Example::appendChild(

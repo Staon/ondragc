@@ -1,0 +1,14 @@
+*.o
+runtest
+*.cc
+*.lib
+*.lst
+*.err
+*.log
+*.lnk
+*.ver.cpp
+gcexample
+*.usage
+.deps
+.project
+.cproject

@@ -23,6 +23,7 @@
 //#define TEST_STORE_REGRESSION
 #include <otest/otest.h>
 
+#include <md5/hashstream.h>
 #include <datstr/dstring.h>
 #include <ostream>
 
@@ -35,8 +36,8 @@ namespace OndraGC {
 TEST_SUITE(GarbageCollector) {
   TEST_CASE(Collecting) {
     TEST_INIT_STATE() {
-      ::OTest::HashStream hos_;   /* -- must be before the manager */
-      OndraGCManager gc_manager_;
+      ::MD5::HashStream hos_;   /* -- must be before the manager */
+      Manager gc_manager_;
       std::ostream* reporter_(&hos_);
 
       TestObjectRootPtr root_(newGC(TestObject, &gc_manager_)(
@@ -79,8 +80,8 @@ TEST_SUITE(GarbageCollector) {
   };
 
   TEST_CASE(BigTest) {
-    ::OTest::HashStream hos;   /* -- must be before the manager */
-    OndraGCManager gc_manager;
+    ::MD5::HashStream hos;   /* -- must be before the manager */
+    Manager gc_manager;
     std::ostream* reporter;
 
     BigTest() :
@@ -128,8 +129,8 @@ TEST_SUITE(GarbageCollector) {
 
   TEST_CASE(WeakReferencesRoot) {
     TEST_INIT_STATE() {
-      ::OTest::HashStream hos_;   /* -- must be before the manager */
-      OndraGCManager gc_manager_;
+      ::MD5::HashStream hos_;   /* -- must be before the manager */
+      Manager gc_manager_;
       std::ostream* reporter_(&hos_);
 
       TestObjectRootPtr root1_(
@@ -267,8 +268,8 @@ TEST_SUITE(GarbageCollector) {
 
   TEST_CASE(WeakReferencesMember) {
     TEST_INIT_STATE() {
-      ::OTest::HashStream hos_;   /* -- must be before the manager */
-      OndraGCManager gc_manager_;
+      ::MD5::HashStream hos_;   /* -- must be before the manager */
+      Manager gc_manager_;
       std::ostream* reporter_(&hos_);
 
       TestObjectRootPtr root_(
@@ -412,8 +413,8 @@ TEST_SUITE(GarbageCollector) {
 
   TEST_CASE(InvalidationOfWeakReferences) {
     TEST_INIT_STATE() {
-      ::OTest::HashStream hos_;   /* -- must be before the manager */
-      OndraGCManager gc_manager_;
+      ::MD5::HashStream hos_;   /* -- must be before the manager */
+      Manager gc_manager_;
       std::ostream* reporter_(&hos_);
 
       TestObjectRootPtr root_(

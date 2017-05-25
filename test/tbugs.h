@@ -52,7 +52,7 @@ class Ba {
     virtual void func9();
 };
 
-class TotalyStrangeClass : public OndraGCObject {
+class TotalyStrangeClass : public Object {
   private:
     int dummy;
 
@@ -65,9 +65,9 @@ class B : public TotalyStrangeClass, public Ba {
     B();
 };
 
-class A : public OndraGCObject {
+class A : public Object {
   private:
-    OndraGCTypeMemberPtr<B> b;
+    TypeMemberPtr<B> b;
 
   public:
     A(B* b_);
@@ -121,13 +121,13 @@ void Ba::func9() {
 }
 
 TotalyStrangeClass::TotalyStrangeClass() :
-  OndraGCObject(),
+  Object(),
   dummy(0) {
 
 }
 
 A::A(B* b_) :
-  OndraGCObject(),
+  Object(),
   b(this, b_) {
 
 }
@@ -140,7 +140,7 @@ std::ostream& A::test_gcTestMark(
 B::B() :
   Ba(5),
   TotalyStrangeClass() {
-  OndraGCTypeRootPtr<A> a_(newGC(A, gcManager())(this));
+  TypeRootPtr<A> a_(newGC(A, gcManager())(this));
   throw "B";
 }
 
@@ -151,7 +151,7 @@ TEST_SUITE(TBugs) {
   TEST_CASE(Bug3561) {
     /* -- test of the bug #3561 */
     TEST_INIT_STATE() {
-      OndraGCManager gc_;
+      Manager gc_;
 
       try {
         newGC(B, &gc_);

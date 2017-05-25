@@ -24,117 +24,117 @@
 
 namespace OndraGC {
 
-template<class Object>
-TypeRootPtr<Object>::TypeRootPtr() {
+template<class Object_>
+TypeRootPtr<Object_>::TypeRootPtr() {
 
 }
 
-template<class Object>
-TypeRootPtr<Object>::TypeRootPtr(
-    Object* object_) :
+template<class Object_>
+TypeRootPtr<Object_>::TypeRootPtr(
+    Object_* object_) :
   RootPtr(object_) {
 
 }
 
-template<class Object>
-TypeRootPtr<Object>::TypeRootPtr(
-    const TypeRootPtr<Object>& ptr_) :
+template<class Object_>
+TypeRootPtr<Object_>::TypeRootPtr(
+    const TypeRootPtr<Object_>& ptr_) :
   RootPtr(ptr_) {
 
 }
 
-template<class Object>
-void TypeRootPtr<Object>::swap(
-    TypeRootPtr<Object>& ptr_) {
+template<class Object_>
+void TypeRootPtr<Object_>::swap(
+    TypeRootPtr<Object_>& ptr_) {
   RootPtr::swap(ptr_);
 }
 
-template<class Object>
-TypeRootPtr<Object>& TypeRootPtr<Object>::operator = (
-    const TypeRootPtr<Object>& ptr_) {
-  TypeRootPtr<Object> tmp_(ptr_);
+template<class Object_>
+TypeRootPtr<Object_>& TypeRootPtr<Object_>::operator = (
+    const TypeRootPtr<Object_>& ptr_) {
+  TypeRootPtr<Object_> tmp_(ptr_);
   swap(tmp_);
   return *this;
 }
 
-template<class Object>
-TypeRootPtr<Object> & TypeRootPtr<Object>::operator = (
-    Object* ptr_) {
-  TypeRootPtr<Object> tmp_(ptr_);
+template<class Object_>
+TypeRootPtr<Object_> & TypeRootPtr<Object_>::operator = (
+    Object_* ptr_) {
+  TypeRootPtr<Object_> tmp_(ptr_);
   swap(tmp_);
   return *this;
 }
 
-template<class Object>
-Object& TypeRootPtr<Object>::operator *() const {
-  return *static_cast<Object*>(getObject());
+template<class Object_>
+Object_& TypeRootPtr<Object_>::operator *() const {
+  return *static_cast<Object_*>(getObject());
 }
 
-template<class Object>
-Object* TypeRootPtr<Object>::operator -> () const {
-  return static_cast<Object*>(getObject());
+template<class Object_>
+Object_* TypeRootPtr<Object_>::operator -> () const {
+  return static_cast<Object_*>(getObject());
 }
 
-template<class Object>
-Object* TypeRootPtr<Object>::objectAddr() const {
-  return static_cast<Object*>(getObject());
+template<class Object_>
+Object_* TypeRootPtr<Object_>::objectAddr() const {
+  return static_cast<Object_*>(getObject());
 }
 
-template<class Object>
-TypeMemberPtr<Object>::TypeMemberPtr() {
+template<class Object_>
+TypeMemberPtr<Object_>::TypeMemberPtr() {
 
 }
 
-template<class Object>
-TypeMemberPtr<Object>::TypeMemberPtr(
+template<class Object_>
+TypeMemberPtr<Object_>::TypeMemberPtr(
     Object* parent_,
-    const TypeMemberPtr<Object>::ParentMark& mark_) :
+    const TypeMemberPtr<Object_>::ParentMark& mark_) :
   MemberPtr(parent_, mark_) {
 
 }
 
-template<class Object>
-TypeMemberPtr<Object>::TypeMemberPtr(
+template<class Object_>
+TypeMemberPtr<Object_>::TypeMemberPtr(
     Object* parent_,
-    Object* object_) :
+    Object_* object_) :
   MemberPtr(parent_, object_) {
 
 }
 
-template<class Object>
-TypeMemberPtr<Object>::TypeMemberPtr(
-    const TypeMemberPtr<Object>& ptr_) :
+template<class Object_>
+TypeMemberPtr<Object_>::TypeMemberPtr(
+    const TypeMemberPtr<Object_>& ptr_) :
   MemberPtr(ptr_) {
 
 }
 
-template<class Object>
-void TypeMemberPtr<Object>::swap(
-    TypeMemberPtr<Object>& ptr_) {
+template<class Object_>
+void TypeMemberPtr<Object_>::swap(
+    TypeMemberPtr<Object_>& ptr_) {
   MemberPtr::swap(ptr_);
 }
 
-template<class Object>
-TypeMemberPtr<Object>& TypeMemberPtr<Object>::operator = (
-    const TypeMemberPtr<Object>& ptr_) {
-  TypeMemberPtr<Object> tmp_(ptr_);
+template<class Object_>
+TypeMemberPtr<Object_>& TypeMemberPtr<Object_>::operator = (
+    const TypeMemberPtr<Object_>& ptr_) {
+  TypeMemberPtr<Object_> tmp_(ptr_);
   swap(tmp_);
   return *this;
 }
 
-template<class Object>
-Object& TypeMemberPtr<Object>::operator *() const {
-  return *static_cast<Object*>(getObject());
+template<class Object_>
+Object_& TypeMemberPtr<Object_>::operator *() const {
+  return *static_cast<Object_*>(getObject());
 }
 
-template<class Object>
-Object* TypeMemberPtr<Object>::operator -> () const {
-  return static_cast<Object*>(getObject());
+template<class Object_>
+Object_* TypeMemberPtr<Object_>::operator -> () const {
+  return static_cast<Object_*>(getObject());
 }
 
-template<class Object>
-Object* TypeMemberPtr<Object>::objectAddr() const {
-  return static_cast<Object*>(getObject());
+template<class Object_>
+Object_* TypeMemberPtr<Object_>::objectAddr() const {
+  return static_cast<Object_*>(getObject());
 }
 
 } /* -- namespace OndraGC */

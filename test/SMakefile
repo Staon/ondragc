@@ -1,7 +1,10 @@
 Include([".", "../include", "../lib"]);
 
 Project();
+  Profile("memtest");
+  
   Test("runtest", [
+    "tasgctypeptr.h",
     "tbugs.h",
     "tcollector.h",
     "testobject.cpp", "testobject.h",
@@ -9,5 +12,7 @@ Project();
   Link([
     "ondragc.lib",
     "ondrart_heapcheck.lib",
+    "ondrart_string.lib",
+    "oregex.lib",
   ]);
 EndProject();

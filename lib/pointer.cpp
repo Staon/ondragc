@@ -122,41 +122,34 @@ void BasePtr::invalidateWeakReferences() {
   }
 }
 
-bool operator == (
-    const BasePtr& ptr1_,
-    const BasePtr& ptr2_) {
-  return ptr1_.object == ptr2_.object;
-}
+/*
+ * Implementation of comparison operators.
+ */
+#define ONDRA_GC_BASEPTR_OPERATOR_( OP__ ) \
+    bool operator OP__ ( \
+        const BasePtr& ptr1_, \
+        const BasePtr& ptr2_) { \
+      return ptr1_.object OP__ ptr2_.object; \
+    } \
+    bool operator OP__ ( \
+        const Object* ptr1_, \
+        const BasePtr& ptr2_) { \
+      return ptr1_ OP__ ptr2_.object; \
+    } \
+    bool operator OP__ ( \
+        const BasePtr& ptr1_, \
+        const Object* ptr2_) { \
+      return ptr1_.object OP__ ptr2_; \
+    }
 
-bool operator == (
-    const Object* ptr1_,
-    const BasePtr& ptr2_) {
-  return ptr1_ == ptr2_.object;
-}
+ONDRA_GC_BASEPTR_OPERATOR_(==)
+ONDRA_GC_BASEPTR_OPERATOR_(!=)
+ONDRA_GC_BASEPTR_OPERATOR_(<)
+ONDRA_GC_BASEPTR_OPERATOR_(<=)
+ONDRA_GC_BASEPTR_OPERATOR_(>)
+ONDRA_GC_BASEPTR_OPERATOR_(>=)
 
-bool operator == (
-    const BasePtr& ptr1_,
-    const Object* ptr2_) {
-  return ptr1_.object == ptr2_;
-}
-
-bool operator != (
-    const BasePtr& ptr1_,
-    const BasePtr& ptr2_) {
-  return ptr1_.object != ptr2_.object;
-}
-
-bool operator != (
-    const Object* ptr1_,
-    const BasePtr& ptr2_) {
-  return ptr1_ != ptr2_.object;
-}
-
-bool operator != (
-    const BasePtr& ptr1_,
-    const Object* ptr2_) {
-  return ptr1_.object != ptr2_;
-}
+#undef ONDRA_GC_BASEPTR_OPERATOR_
 
 /*
 ==========================================================================
@@ -318,6 +311,18 @@ MemberPtr& MemberPtr::operator = (
   MemberPtr tmp_(ptr_);
   swap(tmp_);
   return *this;
+}
+
+void MemberPtr::swapContent(
+    MemberPtr& ptr_) {
+  /* -- swap objects */
+  BasePtr::swap(ptr_);
+
+  /* -- apply write barriers */
+  if(object != 0)
+    object -> manager -> writeBarrier(parent, object);
+  if(ptr_.object != 0)
+    ptr_.object -> manager -> writeBarrier(ptr_.parent, ptr_.object);
 }
 
 void MemberPtr::makeWeak() {

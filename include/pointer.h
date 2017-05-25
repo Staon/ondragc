@@ -106,44 +106,52 @@ class BasePtr {
      */
     void invalidateWeakReferences();
 
-    friend bool operator == (
-        const BasePtr& ptr1_,
-        const BasePtr& ptr2_);
-    friend bool operator == (
-        const Object* ptr1_,
-        const BasePtr& ptr2_);
-    friend bool operator == (
-        const BasePtr& ptr1_,
+    /*
+     * Comparison operator friend declarations.
+     */
+#define ONDRA_GC_BASEPTR_FRIEND_OP_( OP__ ) \
+    friend bool operator OP__ ( \
+        const BasePtr& ptr1_, \
+        const BasePtr& ptr2_); \
+    friend bool operator OP__ ( \
+        const Object* ptr1_, \
+        const BasePtr& ptr2_); \
+    friend bool operator OP__ ( \
+        const BasePtr& ptr1_, \
         const Object* ptr2_);
-    friend bool operator != (
-        const BasePtr& ptr1_,
-        const BasePtr& ptr2_);
-    friend bool operator != (
-        const Object* ptr1_,
-        const BasePtr& ptr2_);
-    friend bool operator != (
-        const BasePtr& ptr1_,
-        const Object* ptr2_);
+
+    ONDRA_GC_BASEPTR_FRIEND_OP_(==)
+    ONDRA_GC_BASEPTR_FRIEND_OP_(!=)
+    ONDRA_GC_BASEPTR_FRIEND_OP_(<)
+    ONDRA_GC_BASEPTR_FRIEND_OP_(<=)
+    ONDRA_GC_BASEPTR_FRIEND_OP_(>)
+    ONDRA_GC_BASEPTR_FRIEND_OP_(>=)
+
+#undef ONDRA_GC_BASEPTR_FRIEND_OP_
 };
 
-bool operator == (
-    const BasePtr& ptr1_,
-    const BasePtr& ptr2_);
-bool operator == (
-    const Object* ptr1_,
-    const BasePtr& ptr2_);
-bool operator == (
-    const BasePtr& ptr1_,
-    const Object* ptr2_);
-bool operator != (
-    const BasePtr& ptr1_,
-    const BasePtr& ptr2_);
-bool operator != (
-    const Object* ptr1_,
-    const BasePtr& ptr2_);
-bool operator != (
-    const BasePtr& ptr1_,
-    const Object* ptr2_);
+/*
+ * Comparison operators.
+ */
+#define ONDRA_GC_BASEPTR_OPERATOR_( OP__ ) \
+    bool operator OP__ ( \
+        const BasePtr& ptr1_, \
+        const BasePtr& ptr2_); \
+    bool operator OP__ ( \
+        const Object* ptr1_, \
+        const BasePtr& ptr2_); \
+    bool operator OP__ ( \
+        const BasePtr& ptr1_, \
+        const Object* ptr2_);
+
+ONDRA_GC_BASEPTR_OPERATOR_(==)
+ONDRA_GC_BASEPTR_OPERATOR_(!=)
+ONDRA_GC_BASEPTR_OPERATOR_(<)
+ONDRA_GC_BASEPTR_OPERATOR_(<=)
+ONDRA_GC_BASEPTR_OPERATOR_(>)
+ONDRA_GC_BASEPTR_OPERATOR_(>=)
+
+#undef ONDRA_GC_BASEPTR_OPERATOR_
 
 /**
  * @brief Root pointer
@@ -280,6 +288,16 @@ class MemberPtr : public BasePtr {
      */
     MemberPtr& operator = (
         const MemberPtr& ptr_);
+
+    /**
+     * @brief Swap content of the pointers
+     *
+     * The method swaps objects which are pointed by the pointers (i.e. the
+     * first member pointer now points the second object). This method can
+     * be used to swap data between objects.
+     */
+    void swapContent(
+        MemberPtr& ptr_);
 
   public:
     /**
