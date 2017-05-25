@@ -17,10 +17,10 @@
  * along with OndraGC.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <objectptr.h>
+#include "../ondragc/objectptr.h"
 
-#include <object.h>
-#include <pointerimpl.h>
+#include "../ondragc/object.h"
+#include "../ondragc/pointerimpl.h"
 
 namespace OndraGC {
 

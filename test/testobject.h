@@ -20,13 +20,12 @@
 #ifndef OndraGC_TESTOBJECT_H_
 #define OndraGC_TESTOBJECT_H_
 
-#include <object.h>
-
 #include <datstr/dstring.h>
 #include <iosfwd>
 #include <vector>
 
-#include <pointerdecl.h>
+#include "../ondragc/object.h"
+#include "../ondragc/pointerdecl.h"
 
 namespace OndraGC {
 

@@ -27,8 +27,8 @@
 #include <datstr/dstring.h>
 #include <ostream>
 
-#include <ctor.h>
-#include <manager.h>
+#include "../ondragc/ctor.h"
+#include "../ondragc/manager.h"
 #include "testobject.h"
 
 namespace OndraGC {

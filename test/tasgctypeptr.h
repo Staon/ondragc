@@ -5,12 +5,11 @@
 #include <otest/otest.h>
 
 /* -- tested file */
-#include <asgctypeptrimpl.h>
-
 #include <ondragc/ctor.h>
 #include <ondragc/manager.h>
 #include <ondragc/object.h>
 #include <testutils/invocationrecorder.h>
+#include "../ondragc/asgctypeptrimpl.h"
 
 namespace OndraGC {
 

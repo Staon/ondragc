@@ -19,7 +19,7 @@
 
 #include "history.h"
 
-#include <gcassert.h>
+#include "../ondragc/gcassert.h"
 
 namespace OndraGC {
 

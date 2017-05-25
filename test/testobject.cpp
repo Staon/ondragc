@@ -20,10 +20,10 @@
 #include "testobject.h"
 
 #include <algorith>
-#include <gcassert.h>
 #include <ostream>
 
-#include <pointerimpl.h>
+#include "../ondragc/gcassert.h"
+#include "../ondragc/pointerimpl.h"
 
 namespace OndraGC {
 

@@ -17,10 +17,10 @@
  * along with OndraGC.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <protoobject.h>
+#include "../ondragc/protoobject.h"
 
-#include <gcassert.h>
-#include <manager.h>
+#include "../ondragc/gcassert.h"
+#include "../ondragc/manager.h"
 
 namespace OndraGC {
 
