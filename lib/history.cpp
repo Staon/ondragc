@@ -19,7 +19,7 @@
 
 #include "history.h"
 
-#include <oassert.h>
+#include <gcassert.h>
 
 namespace OndraGC {
 
@@ -28,7 +28,7 @@ History::History(
   sum(0),
   history_size(size_),
   curr(0) {
-  OASSERT_1(size_ > 0);
+  OGCASSERT(size_ > 0);
 
   samples = new int[size_];
   for(int i = 0; i < history_size; ++ i)

@@ -20,7 +20,7 @@
 #include "testobject.h"
 
 #include <algorith>
-#include <ondrart/oassert.h>
+#include <gcassert.h>
 #include <ostream>
 
 #include <pointerimpl.h>
@@ -61,7 +61,7 @@ void TestObject::removeChild(
 
 void TestObject::swapFirstItems(
     TestObject* object_) {
-  OASSERT_1(!children.empty() && object_ != 0 && !object_ -> children.empty());
+  OGCASSERT(!children.empty() && object_ != 0 && !object_ -> children.empty());
   children.front().swapContent(object_ -> children.front());
 }
 

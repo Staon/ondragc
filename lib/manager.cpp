@@ -21,8 +21,8 @@
 
 #include <ostream>
 
+#include <gcassert.h>
 #include "history.h"
-#include <oassert.h>
 #include <object.h>
 #include <referent.h>
 
@@ -95,11 +95,11 @@ ManagerHead::~ManagerHead() {
 
 void ManagerHead::gcScan(
     Manager* manager_) {
-  OASSERT_NEVER();
+  OGCASSERT_NEVER();
 }
 
 void ManagerHead::gcFinalize() {
-  OASSERT_NEVER();
+  OGCASSERT_NEVER();
 }
 
 void ManagerHead::swap(
@@ -343,7 +343,7 @@ bool ManagerImpl::doGCQuantum(
       return true;
 
     default:
-      OASSERT_NEVER();
+      OGCASSERT_NEVER();
       return false;
   }
 }
@@ -372,7 +372,7 @@ void Manager::initObject(
     void* block_,
     std::size_t size_,
     std::size_t offset_) {
-  OASSERT_1(object_ != 0 && block_ != 0);
+  OGCASSERT(object_ != 0 && block_ != 0);
 
   MAKE_WHITE(object_);
   object_ -> insertBefore(&pimpl -> white);
@@ -381,7 +381,7 @@ void Manager::initObject(
 
 void Manager::makeWhite(
     ProtoObject* object_) {
-  OASSERT_1(object_ != 0);
+  OGCASSERT(object_ != 0);
 
   if(!IS_WHITE(object_)) {
     object_ -> remove();
@@ -392,7 +392,7 @@ void Manager::makeWhite(
 
 void Manager::makeGrey(
     ProtoObject* object_) {
-  OASSERT_1(object_ != 0);
+  OGCASSERT(object_ != 0);
 
   if(!IS_GREY(object_)) {
     object_ -> remove();
@@ -403,7 +403,7 @@ void Manager::makeGrey(
 
 void Manager::makeBlack(
     ProtoObject* object_) {
-  OASSERT_1(object_ != 0);
+  OGCASSERT(object_ != 0);
 
   if(!IS_BLACK(object_)) {
     object_ -> remove();
@@ -415,7 +415,7 @@ void Manager::makeBlack(
 void Manager::writeBarrier(
     Object* parent_,
     ProtoObject* object_) {
-  OASSERT_1(parent_ != 0 && object_ != 0 && ! IS_ECRU(object_));
+  OGCASSERT(parent_ != 0 && object_ != 0 && !IS_ECRU(object_));
 
   if(IS_BLACK(parent_) && IS_WHITE(object_))
     makeGrey(object_);
@@ -423,7 +423,7 @@ void Manager::writeBarrier(
 
 void Manager::makeRoot(
     ProtoObject* object_) {
-  OASSERT_1(object_ != 0);
+  OGCASSERT(object_ != 0);
 
   ++object_ -> root_count;
   makeGrey(object_);
@@ -431,14 +431,14 @@ void Manager::makeRoot(
 
 void Manager::freeRoot(
     ProtoObject* object_) {
-  OASSERT_1(object_ != 0 && object_ -> root_count > 0);
+  OGCASSERT(object_ != 0 && object_ -> root_count > 0);
 
   --object_ -> root_count;
 }
 
 void Manager::scavenge(
     ProtoObject* object_) {
-  OASSERT_1(object_ != 0);
+  OGCASSERT(object_ != 0);
   if(!IS_DESTROYED(object_) && IS_WHITE(object_))
     makeGrey(object_);
 }
@@ -483,7 +483,7 @@ void Manager::setWaitLength(
 
 bool Manager::isZombie(
     const ProtoObject* object_) const {
-  OASSERT_1(object_ != 0);
+  OGCASSERT(object_ != 0);
   return IS_ECRU(object_);
 }
 

@@ -22,8 +22,8 @@
 #include <algorithm>
 
 #include <ctor.h>
+#include <gcassert.h>
 #include <manager.h>
-#include <oassert.h>
 #include <object.h>
 #include <referent.h>
 
@@ -68,7 +68,7 @@ BasePtr& BasePtr::operator = (
 }
 
 bool BasePtr::makeWeak() {
-  OASSERT_1(object != 0);
+  OGCASSERT(object != 0);
   if((object -> flags & Object::WEAK_BIT) == 0) {
     Object* o_(static_cast<Object*>(object));
     if(o_ -> referent == 0) {  /* -- the referent doesn't exist yet */
@@ -88,7 +88,7 @@ bool BasePtr::makeWeak() {
 }
 
 bool BasePtr::makeStrong() {
-  OASSERT_1(object != 0);
+  OGCASSERT(object != 0);
   if((object -> flags & Object::WEAK_BIT) != 0) {
     object = static_cast<Referent*>(object) -> ref_object;
     return true;
@@ -244,8 +244,8 @@ MemberPtr::MemberPtr(
   parent(0),
   prev(0),
   next(0) {
-  OASSERT_1(parent_ != 0);
-  parent_ -> appendChild(this);
+  OGCASSERT(parent_ != 0);
+  parent_ -> gcAppendChild(this);
 }
 
 MemberPtr::MemberPtr(
@@ -255,8 +255,8 @@ MemberPtr::MemberPtr(
   parent(0),
   prev(0),
   next(0) {
-  OASSERT_1(parent_ != 0);
-  parent_ -> appendChild(this);
+  OGCASSERT(parent_ != 0);
+  parent_ -> gcAppendChild(this);
   if(object_)
     object_ -> manager -> writeBarrier(parent_, object_);
 }
@@ -268,7 +268,7 @@ MemberPtr::MemberPtr(
   prev(0),
   next(0) {
   if(ptr_.parent != 0)
-    ptr_.parent -> appendChild(this);
+    ptr_.parent -> gcAppendChild(this);
   Object* object_(getObject());
   if(object_)
     object_ -> manager -> writeBarrier(parent, object_);
@@ -276,26 +276,26 @@ MemberPtr::MemberPtr(
 
 MemberPtr::~MemberPtr() {
   if(parent)
-    parent -> removeChild(this);
+    parent -> gcRemoveChild(this);
   parent = 0;
   object = 0;
 }
 
 void MemberPtr::swap(
     MemberPtr& ptr_) {
-  OASSERT_1(parent == ptr_.parent || parent == 0 || ptr_.parent == 0);
+  OGCASSERT(parent == ptr_.parent || parent == 0 || ptr_.parent == 0);
 
   /* -- swap parents */
   if(parent != ptr_.parent) {
     Object* p1_(parent);
     Object* p2_(ptr_.parent);
     if(p1_) {
-      p1_ -> removeChild(this);
-      p1_ -> appendChild(& ptr_);
+      p1_ -> gcRemoveChild(this);
+      p1_ -> gcAppendChild(& ptr_);
     }
     if(p2_) {
-      p2_ -> removeChild(& ptr_);
-      p2_ -> appendChild(this);
+      p2_ -> gcRemoveChild(& ptr_);
+      p2_ -> gcAppendChild(this);
     }
   }
 
@@ -337,7 +337,7 @@ void MemberPtr::makeStrong() {
 
 void MemberPtr::clear() {
   if(parent)
-    parent -> removeChild(this);
+    parent -> gcRemoveChild(this);
   parent = 0;
   object = 0;
 }

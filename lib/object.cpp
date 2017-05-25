@@ -21,8 +21,8 @@
 
 #include <ostream>
 
+#include <gcassert.h>
 #include <manager.h>
-#include <oassert.h>
 #include <pointer.h>
 #include <referent.h>
 
@@ -50,7 +50,7 @@ Object::~Object() {
   }
 }
 
-bool Object::checkChildValidity(
+bool Object::gcCheckChildValidity(
     MemberPtr* child_) const {
   if(child_ -> parent != this)
     return false;
@@ -69,9 +69,9 @@ bool Object::checkChildValidity(
   return false;
 }
 
-void Object::appendChild(
+void Object::gcAppendChild(
     MemberPtr* child_) {
-  OASSERT_1(child_ != 0 && child_ -> parent == 0);
+  OGCASSERT(child_ != 0 && child_ -> parent == 0);
 
   child_ -> parent = this;
   if(ch_end == 0) {
@@ -86,12 +86,12 @@ void Object::appendChild(
   }
 }
 
-void Object::removeChild(
+void Object::gcRemoveChild(
     MemberPtr* child_) {
-  OASSERT_1(child_ != 0);
+  OGCASSERT(child_ != 0);
 
   if(child_ -> prev == 0) {
-    OASSERT_1(child_ == ch_begin);
+    OGCASSERT(child_ == ch_begin);
     ch_begin = ch_begin -> next;
     if(ch_begin != 0)
       ch_begin -> prev = 0;
@@ -100,7 +100,7 @@ void Object::removeChild(
     child_ -> prev -> next = child_ -> next;
 
   if(child_ -> next == 0) {
-    OASSERT_1(child_ == ch_end);
+    OGCASSERT(child_ == ch_end);
     ch_end = ch_end -> prev;
     if(ch_end != 0)
       ch_end -> next = 0;
@@ -114,7 +114,7 @@ void Object::removeChild(
 
 void Object::gcScan(
     Manager* manager_) {
-  OASSERT_1(manager_ != 0);
+  OGCASSERT(manager_ != 0);
 
   /* -- children */
   if(ch_begin != 0) {

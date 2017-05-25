@@ -53,14 +53,14 @@ class Object : public ProtoObject {
         const Object&);
 
     /* -- children */
-    void appendChild(
+    void gcAppendChild(
         MemberPtr* child_);
-    void removeChild(
+    void gcRemoveChild(
         MemberPtr* child_);
     virtual void gcScan(
         Manager* manager_);
 
-    bool checkChildValidity(
+    bool gcCheckChildValidity(
         MemberPtr* child_) const;
 
   public:

@@ -19,8 +19,8 @@
 
 #include <protoobject.h>
 
+#include <gcassert.h>
 #include <manager.h>
-#include <oassert.h>
 
 namespace OndraGC {
 
@@ -44,13 +44,13 @@ Manager* ProtoObject::gcManager() const {
 }
 
 bool ProtoObject::gcIsZombie() const {
-  OASSERT_1(manager != 0);
+  OGCASSERT(manager != 0);
   return manager -> isZombie(this);
 }
 
 void ProtoObject::insertBefore(
     ProtoObject* pivot_) {
-  OASSERT_1(pivot_ != 0 && next == prev);
+  OGCASSERT(pivot_ != 0 && next == prev);
 
   prev = pivot_ -> prev;
   next = pivot_;

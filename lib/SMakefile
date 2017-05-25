@@ -2,9 +2,9 @@ Include([".", "../include"]);
 
 Project("ondragc.lib");
   Lib("ondragc", [
-    "history.cpp", "history.h",
+    "history.cpp",
+    "history.h",
     "manager.cpp",
-    "oassert.cpp",
     "object.cpp",
     "objectptr.cpp",
     "pointer.cpp",
