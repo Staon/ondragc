@@ -20,6 +20,7 @@
 #include "testobject.h"
 
 #include <algorith>
+#include <ondrart/oassert.h>
 #include <ostream>
 
 #include <pointerimpl.h>
@@ -56,6 +57,12 @@ void TestObject::removeChild(
   Children::iterator iter_(
       std::remove(children.begin(), children.end(), object_));
   children.erase(iter_, children.end());
+}
+
+void TestObject::swapFirstItems(
+    TestObject* object_) {
+  OASSERT_1(!children.empty() && object_ != 0 && !object_ -> children.empty());
+  children.front().swapContent(object_ -> children.front());
 }
 
 std::ostream& TestObject::test_gcTestMark(

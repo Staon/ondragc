@@ -133,6 +133,16 @@ template<class Object_> class TypeMemberPtr : public MemberPtr {
         const TypeMemberPtr<Object_>& ptr_);
 
     /**
+     * @brief Swap content of the pointers
+     *
+     * The method swaps objects which are pointed by the pointers (i.e. the
+     * first member pointer now points the second object). This method can
+     * be used to swap data between objects.
+     */
+    void swapContent(
+        TypeMemberPtr<Object_>& ptr_);
+
+    /**
      * @brief Get the GC object
      */
     Object_& operator *() const;

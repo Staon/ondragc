@@ -66,6 +66,8 @@ class TestObject : public Object {
         TestObject* object_);
     void removeChild(
         TestObject* object_);
+    void swapFirstItems(
+        TestObject* object_);
 
     virtual std::ostream& test_gcTestMark(
         std::ostream& os_) const;

@@ -123,6 +123,12 @@ TypeMemberPtr<Object_>& TypeMemberPtr<Object_>::operator = (
 }
 
 template<class Object_>
+void TypeMemberPtr<Object_>::swapContent(
+    TypeMemberPtr<Object_>& ptr_) {
+  MemberPtr::swapContent(ptr_);
+}
+
+template<class Object_>
 Object_& TypeMemberPtr<Object_>::operator *() const {
   return *static_cast<Object_*>(getObject());
 }

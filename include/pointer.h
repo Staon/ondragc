@@ -278,7 +278,11 @@ class MemberPtr : public BasePtr {
     ~MemberPtr();
 
     /**
-     * @brief Swap contents
+     * @brief Swap member pointers
+     *
+     * The method swaps whole member pointers. It can be done only for
+     * member pointers which are parts of the same parent. When the parents
+     * are difference, the method asserts and terminate the process.
      */
     void swap(
         MemberPtr& ptr_);

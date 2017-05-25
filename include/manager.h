@@ -118,6 +118,12 @@ class Manager {
     void forceClean();
 
     /**
+     * @brief Force start new GC cycle.
+     * You have to call doGCQuantum to do the work
+     */
+    void forceCycle();
+
+    /**
      * @brief Set length of the quantum
      *
      * @param quantum_ The length

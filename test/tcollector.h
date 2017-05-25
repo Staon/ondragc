@@ -532,6 +532,31 @@ TEST_SUITE(GarbageCollector) {
       TEST_REGRESS_D("reporter hash", hos_.getHash());
     }
   };
+
+  TEST_CASE(SwapOfContent) {
+    TEST_INIT_STATE() {
+      ::MD5::HashStream hos_;   /* -- must be before the manager */
+      Manager gc_manager_;
+      std::ostream* reporter_(&hos_);
+
+      TestObjectRootPtr root1_(
+          newGC(TestObject, &gc_manager_)("Root 1", reporter_));
+      root1_ -> appendChild(
+          newGC(TestObject, &gc_manager_)("Child 1", reporter_));
+      TestObjectRootPtr root2_(
+          newGC(TestObject, &gc_manager_)("Root 2", reporter_));
+      root2_ -> appendChild(
+          newGC(TestObject, &gc_manager_)("Child 2", reporter_));
+      TEST_REGRESS("prepared", gc_manager_);
+
+      root1_ -> swapFirstItems(root2_.objectAddr());
+      TEST_REGRESS("swapped", gc_manager_);
+
+      root1_.clear();
+      gc_manager_.forceClean();
+      TEST_REGRESS("cleaned", gc_manager_);
+    }
+  };
 };
 
 } /* -- namespace OndraGC */

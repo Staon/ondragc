@@ -31,7 +31,7 @@ std::size_t computeGCObjectOffset() {
   return
       reinterpret_cast<char*>(static_cast<ProtoObject*>(
           reinterpret_cast<Type*>(0xdeadbeef)))
-      - reinterpret_cast<char*>(reinterpret_cast<Type*>(0xdeadbeef));
+      - reinterpret_cast<char*>(0xdeadbeef);
 }
 
 } /* -- namespace OndraGC */
