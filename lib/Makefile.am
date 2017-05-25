@@ -11,8 +11,8 @@ libondragc_la_SOURCES = \
     protoobject.cpp \
     referent.cpp
 libondragc_la_LDFLAGS = -version-info `echo $(PACKAGE_VERSION) | tr . :`
-includelibondragc = $(includedir)/ondragc
-include_HEADERS = \
+includelibondragc_ladir = $(includedir)/ondragc
+includelibondragc_la_HEADERS = \
     ../ondragc/asgctypeptrdecl.h \
     ../ondragc/asgctypeptrimpl.h \
     ../ondragc/ctor.h \
