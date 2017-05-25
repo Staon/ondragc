@@ -17,11 +17,11 @@
  * along with OndraGC.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "../ondragc/referent.h"
+#include <referent.h>
 
 #include <ostream>
 
-#include "../ondragc/object.h"
+#include <object.h>
 
 namespace OndraGC {
 

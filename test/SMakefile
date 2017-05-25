@@ -1,7 +1,8 @@
-Include([".", "../include", "../lib"]);
+Include([".", "../ondragc", "../lib"]);
 
 Project();
   Profile("memtest");
+  Preproc("AVECO_ASTRA_ENABLED");
   
   Test("runtest", [
     "tasgctypeptr.h",

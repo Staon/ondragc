@@ -1,4 +1,4 @@
-Include([".", "../include"]);
+Include([".", "../ondragc"]);
 
 Project();
   TestExec("gcexample", [

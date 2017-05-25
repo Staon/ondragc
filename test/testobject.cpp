@@ -22,8 +22,8 @@
 #include <algorith>
 #include <ostream>
 
-#include "../ondragc/gcassert.h"
-#include "../ondragc/pointerimpl.h"
+#include <gcassert.h>
+#include <pointerimpl.h>
 
 namespace OndraGC {
 

@@ -1,9 +1,9 @@
 #ifndef OndraGCINCLUDE_GCASSERT_H_
 #define OndraGCINCLUDE_GCASSERT_H_
 
-#include <config.h>
-
 #if !defined(AVECO_ASTRA_ENABLED)
+
+#include <config.h>
 
 #include <assert.h>
 

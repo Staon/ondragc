@@ -17,14 +17,14 @@
  * along with OndraGC.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "../ondragc/object.h"
+#include <object.h>
 
 #include <ostream>
 
-#include "../ondragc/gcassert.h"
-#include "../ondragc/manager.h"
-#include "../ondragc/pointer.h"
-#include "../ondragc/referent.h"
+#include <gcassert.h>
+#include <manager.h>
+#include <pointer.h>
+#include <referent.h>
 
 namespace OndraGC {
 

@@ -1,6 +1,8 @@
-Include([".", "../include"]);
+Include([".", "../ondragc"]);
 
 Project("ondragc.lib");
+  Preproc("AVECO_ASTRA_ENABLED");
+  
   Lib("ondragc", [
     "history.cpp",
     "history.h",

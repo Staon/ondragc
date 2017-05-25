@@ -22,11 +22,11 @@
 #include <string>
 #include <vector>
 
-#include "../ondragc/ctor.h"
-#include "../ondragc/manager.h"
-#include "../ondragc/object.h"
-#include "../ondragc/pointerdecl.h"
-#include "../ondragc/pointerimpl.h"
+#include <ctor.h>
+#include <manager.h>
+#include <object.h>
+#include <pointerdecl.h>
+#include <pointerimpl.h>
 
 namespace OndraGC {
 

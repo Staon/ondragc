@@ -20,7 +20,7 @@
 #ifndef OndraGC_POINTERIMPL_H_
 #define OndraGC_POINTERIMPL_H_
 
-#include <ondragc/pointer.h>
+#include <ondragc/pointerdecl.h>
 
 namespace OndraGC {
 

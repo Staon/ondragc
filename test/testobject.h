@@ -24,8 +24,8 @@
 #include <iosfwd>
 #include <vector>
 
-#include "../ondragc/object.h"
-#include "../ondragc/pointerdecl.h"
+#include <object.h>
+#include <pointerdecl.h>
 
 namespace OndraGC {
 
