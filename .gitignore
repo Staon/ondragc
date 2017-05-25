@@ -1,4 +1,10 @@
 *.o
+*.lo
+*.a
+*.la
+*.lai
+*.so
+*.so.*
 runtest
 *.cc
 *.lib
@@ -16,3 +22,5 @@ gcexample
 /Makefile
 /autom4te.cache/
 /config.status
+/libtool
+/stamp-h1
