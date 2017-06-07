@@ -471,6 +471,10 @@ void Manager::forceClean() {
   doGCCycle();
 }
 
+void Manager::forceCycle() {
+  pimpl -> cycle_running = true;
+}
+
 void Manager::setQuantumLength(
     unsigned int quantum_) {
   pimpl -> quantum_length = quantum_;
