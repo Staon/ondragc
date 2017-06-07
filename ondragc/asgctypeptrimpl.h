@@ -115,7 +115,7 @@ AsGCTypeMemberPtr< Object_, AsGCTrait >::AsGCTypeMemberPtr(
 template< typename Object_, typename AsGCTrait >
 void AsGCTypeMemberPtr< Object_, AsGCTrait >::swap(
     AsGCTypeMemberPtr& ptr_) {
-  OndraGCMemberPtr::swap(ptr_);
+  MemberPtr::swap(ptr_);
   std::swap(object, ptr_.object);
 }
 
